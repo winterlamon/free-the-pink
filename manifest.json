@@ -1,0 +1,31 @@
+{
+  "name": "Free the Pink",
+  "version": "0.1",
+  "description": "An exercise in coding and trolling. Changes the color of links and buttons to magenta. #FreeThePink",
+  "permissions": ["tabs"],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_title": "Free the Pink",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/ftp_16.png",
+      "32": "images/ftp_32.png",
+      "48": "images/ftp_48.png",
+      "128": "images/ftp_128.png"
+    }
+  },
+  "icons": {
+    "16": "images/ftp_16.png",
+    "32": "images/ftp_32.png",
+    "48": "images/ftp_48.png",
+    "128": "images/ftp_128.png"
+  },
+  "manifest_version": 2
+}
