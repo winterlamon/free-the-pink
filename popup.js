@@ -6,7 +6,9 @@ pinkSubmit.onclick = () => {
     currentWindow: true
   };
 
-  chrome.tabs.query(tabParams, tabs => {
-    chrome.tabs.sendMessage(tabs[0].id, {});
+  chrome.tabs.query(tabParams, tab => {
+    chrome.tabs.executeScript(tab.id, {
+    	file: 'content.js'
+    });
   });
 };
